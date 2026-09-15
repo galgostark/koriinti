@@ -1,8 +1,8 @@
 import { Lote, StageId, ClienteMinero } from '../types';
 import { INITIAL_LOTES, INITIAL_CLIENTES, STAGES } from '../data/mockData';
 
-const STORAGE_KEY = 'minerva_sgo_lotes_v1';
-const CLIENTES_STORAGE_KEY = 'minerva_sgo_clientes_v1';
+const STORAGE_KEY = 'koriinti_lotes_real_v2';
+const CLIENTES_STORAGE_KEY = 'koriinti_clientes_real_v2';
 
 // Servicio de Persistencia y Comunicación Backend
 // NOTA ARQUITECTURA:
@@ -171,6 +171,7 @@ class StorageService {
 
   public resetToDefault(): Lote[] {
     this.saveLotes(INITIAL_LOTES);
+    this.saveClientes(INITIAL_CLIENTES);
     return INITIAL_LOTES;
   }
 }

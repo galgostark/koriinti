@@ -194,7 +194,7 @@ export const LotesProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setLotes(freshLotes);
     const freshClientes = storageService.loadClientes();
     setClientes(freshClientes);
-    addToast('warning', 'Sistema Reiniciado', 'Se restablecieron lotes y clientes al estado inicial de demostración.');
+    addToast('warning', 'Sistema Restablecido', 'Se restablecieron los lotes y clientes con la data real operativa.');
   };
 
   const refreshMarketPrices = () => {
